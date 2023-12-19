@@ -11,11 +11,39 @@
 
 / {
     macros {
-        EE_states: EE_states {
+        EEstates_1: EEstates_1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_SHIFT &kp E &kp LS(E) &kp LS(E) &kp SPACE &kp S &kp T &kp A &kp T &kp E &kp S>;
-            label = "EE_STATES";
+            bindings = <&kp LEFT_SHIFT &kp LS(E) &kp LS(E) &kp SPACE &kp S &kp T &kp A &kp T &kp E &kp S>;
+            label = "EESTATES_1";
+        };
+
+        Firstaid_2: Firstaid_2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LS(R) &kp LS(N) &kp SPACE &kp A &kp D &kp V &kp I &kp S &kp E &kp D &kp SPACE &kp F &kp I &kp R &kp S &kp T &kp SPACE &kp A &kp I &kp D &kp MINUS>;
+            label = "FIRSTAID_2";
+        };
+
+        InjuryHappen_3: InjuryHappen_3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LS(E) &kp LS(E) &kp SPACE &kp S &kp T &kp A &kp T &kp E &kp S &kp SPACE &kp I &kp N &kp J &kp U &kp R &kp Y &kp SPACE &kp H &kp A &kp P &kp P &kp E &kp N &kp E &kp D &kp SPACE>;
+            label = "INJURYHAPPEN_3";
+        };
+
+        GenexEmail: GenexEmail {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp E &kp L &kp T &kp O &kp N &kp DOT &kp C &kp O &kp R &kp T &kp E &kp S &kp AT &kp G &kp E &kp N &kp E &kp X &kp S &kp E &kp R &kp V &kp I &kp C &kp E &kp S &kp DOT &kp C &kp O &kp M>;
+            label = "GENEXEMAIL";
+        };
+
+        ReportInjury_4: ReportInjury_4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LS(E) &kp LS(E) &kp SPACE &kp S &kp T &kp A &kp T &kp E &kp S &kp SPACE &kp C &kp A &kp L &kp L &kp I &kp N &kp G &kp SPACE &kp T &kp O &kp SPACE &kp R &kp E &kp P &kp O &kp R &kp T &kp SPACE &kp I &kp N &kp J &kp U &kp R &kp Y &kp SPACE &kp A &kp N &kp D &kp SPACE &kp F &kp O &kp L &kp L &kp O &kp W &kp SPACE &kp U &kp P &kp SPACE &kp V &kp I &kp S &kp I &kp T &kp DOT>;
+            label = "REPORTINJURY_4";
         };
     };
 
@@ -50,11 +78,11 @@
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0      &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans     &trans     &trans           &trans    &trans    &trans
-&kp F5      &kp F2            &kp UP        &kp RET       &kp F5        &kp F6                          &kp F7     &kp F8     &kp F9           &kp F10   &kp F11   &kp F12
-&kp GRAVE   &kp LEFT          &kp DOWN      &kp RIGHT     &kp DOLLAR    &kp PRCNT                       &kp CARET  &kp AMPS   &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &kp TILDE
-&kp LALT    &ext_power EP_ON  &kp LGUI      &trans        &trans        &trans        &trans    &trans  &trans     &kp MINUS  &kp KP_PLUS      &kp LBRC  &kp RBRC  &kp PIPE
-                                            &trans        &kp LGUI      &trans        &trans    &trans  &trans     &trans     &trans
+&GenexEmail  &EEstates_1       &Firstaid_2  &InjuryHappen_3  &ReportInjury_4  &cutbleeding                    &trans     &kp N7        &kp NUMBER_8  &kp NUMBER_9  &trans    &trans
+&SamePain    &trans            &kp UP       &kp RET          &trans           &trans                          &trans     &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp F11   &kp F12
+&kp GRAVE    &kp LEFT          &kp DOWN     &kp RIGHT        &trans           &trans                          &kp CARET  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp RPAR  &kp TILDE
+&kp LALT     &ext_power EP_ON  &trans       &trans           &trans           &trans        &trans    &trans  &trans     &kp N0        &kp KP_PLUS   &kp LBRC      &kp RBRC  &kp PIPE
+                                            &trans           &kp LGUI         &trans        &trans    &trans  &trans     &trans        &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -69,11 +97,11 @@
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-&trans     &EE_states  &trans  &trans   &trans   &trans                       &trans        &kp N7  &kp N8        &kp N9        &trans    &kp KP_MULTIPLY
-&kp GRAVE  &kp N1      &kp N2  &kp N3   &kp N4   &kp N5                       &trans        &kp N4  &kp N5        &kp N6        &trans    &kp MINUS
-&kp F1     &kp F2      &kp F3  &kp F4   &kp F5   &kp F6                       &trans        &kp N1  &kp N2        &kp N3        &trans    &kp KP_PLUS
-&kp F7     &kp F8      &kp F9  &kp F10  &kp F11  &kp F12  &trans    &kp RBKT  &kp KP_MINUS  &kp N0  &kp C_VOL_DN  &kp C_VOL_UP  &kp RBKT  &kp EQUAL
-                               &trans   &trans   &trans   &trans    &trans    &trans        &trans  &trans
+&bt BT_CLR  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_SEL 0                      &trans  &kp N7  &kp N8        &kp N9        &kp CARET  &kp KP_MULTIPLY
+&kp GRAVE   &kp N1        &kp N2        &kp N3        &kp N4        &kp N5                            &trans  &kp N4  &kp N5        &kp N6        &trans     &kp MINUS
+&kp F1      &kp F2        &kp F3        &kp F4        &kp F5        &kp F6                            &trans  &kp N1  &kp N2        &kp N3        &trans     &kp KP_PLUS
+&kp F7      &kp F8        &kp F9        &kp F10       &kp F11       &kp F12       &trans    &kp RBKT  &trans  &kp N0  &kp C_VOL_DN  &kp C_VOL_UP  &trans     &kp EQUAL
+                                        &kp LEFT_ALT  &trans        &trans        &trans    &trans    &trans  &trans  &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
