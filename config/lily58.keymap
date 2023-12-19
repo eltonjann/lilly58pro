@@ -16,6 +16,7 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_SHIFT &kp LS(E) &kp LS(E) &kp SPACE &kp S &kp T &kp A &kp T &kp E &kp S>;
             label = "EESTATES_1";
+            tap-ms = <0>;
         };
 
         Firstaid_2: Firstaid_2 {
@@ -39,11 +40,11 @@
             label = "GENEXEMAIL";
         };
 
-        ReportInjury_4: ReportInjury_4 {
+        ReportFollow: ReportFollow {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp C &kp A &kp L &kp L &kp I &kp N &kp G &kp SPACE &kp T &kp O &kp SPACE &kp R &kp E &kp P &kp O &kp R &kp T &kp SPACE &kp I &kp N &kp J &kp U &kp R &kp Y &kp SPACE &kp A &kp N &kp D &kp SPACE &kp F &kp O &kp L &kp L &kp O &kp W &kp SPACE &kp U &kp P &kp DOT>;
-            label = "REPORTINJURY_4";
+            bindings = <&none &kp C &kp A &kp L &kp L &kp I &kp N &kp G &kp SPACE &kp T &kp O &kp SPACE &kp R &kp E &kp P &kp O &kp R &kp T &kp SPACE &kp I &kp N &kp C &kp I &kp D &kp E &kp N &kp T &kp SPACE &kp A &kp N &kp D &kp SPACE &kp F &kp O &kp L &kp L &kp O &kp W &kp SPACE &kp U &kp P &kp DOT>;
+            label = "REPORTFOLLOW";
         };
     };
 
@@ -78,11 +79,11 @@
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-&GenexEmail  &EEstates_1       &Firstaid_2  &InjuryHappen_3  &ReportInjury_4  &trans                    &trans     &kp N7        &kp NUMBER_8  &kp NUMBER_9  &trans    &trans
-&trans       &trans            &kp UP       &kp RET          &trans           &trans                    &trans     &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp F11   &kp F12
-&kp GRAVE    &kp LEFT          &kp DOWN     &kp RIGHT        &trans           &trans                    &kp CARET  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp RPAR  &kp TILDE
-&kp LALT     &ext_power EP_ON  &trans       &trans           &trans           &trans  &trans    &trans  &trans     &kp N0        &kp KP_PLUS   &kp LBRC      &kp RBRC  &kp PIPE
-                                            &trans           &kp LGUI         &trans  &trans    &trans  &trans     &trans        &trans
+&GenexEmail  &EEstates_1       &Firstaid_2  &InjuryHappen_3  &ReportFollow  &trans                    &trans     &kp N7        &kp NUMBER_8  &kp NUMBER_9  &trans    &trans
+&trans       &trans            &kp UP       &kp RET          &trans         &trans                    &trans     &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp F11   &kp F12
+&kp GRAVE    &kp LEFT          &kp DOWN     &kp RIGHT        &trans         &trans                    &kp CARET  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp RPAR  &kp TILDE
+&kp LALT     &ext_power EP_ON  &trans       &trans           &trans         &trans  &trans    &trans  &trans     &kp N0        &kp KP_PLUS   &kp LBRC      &kp RBRC  &kp PIPE
+                                            &trans           &kp LGUI       &trans  &trans    &trans  &trans     &trans        &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
