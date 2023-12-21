@@ -53,6 +53,27 @@
             bindings = <&none &kp A &kp N &kp D &kp SPACE &kp F &kp O &kp L &kp L &kp O &kp W &kp SPACE &kp U &kp P &kp DOT>;
             label = "FOLLOWUP";
         };
+
+        NTPassword: NTPassword {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LS(W) &kp E &kp L &kp C &kp O &kp M &kp E &kp UNDER &kp N1 &kp N2 &kp N3 &kp EXCL>;
+            label = "NTPASSWORD";
+        };
+
+        GenexPassword: GenexPassword {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LS(G) &kp E &kp N &kp E &kp X &kp LS(C) &kp LS(C) &kp AT &kp N1 &kp N1 &kp N0 &kp N9 &kp N2 &kp N0 &kp N2 &kp N3>;
+            label = "GENEXPASSWORD";
+        };
+
+        SalesforcePW: SalesforcePW {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LS(G) &kp E &kp N &kp I &kp U &kp S &kp AT &kp N1 &kp N2 &kp N3 &kp EXCL>;
+            label = "SALESFORCEPW";
+        };
     };
 
     keymap {
@@ -86,11 +107,11 @@
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-&GenexEmail  &EEstates_1       &Firstaid_2  &InjuryHappen_3  &Report   &followup                    &trans     &kp N7        &kp NUMBER_8  &kp NUMBER_9  &trans    &trans
-&trans       &trans            &kp UP       &kp RET          &trans    &trans                       &trans     &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp F11   &kp F12
-&kp GRAVE    &kp LEFT          &kp DOWN     &kp RIGHT        &trans    &trans                       &kp CARET  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp RPAR  &kp TILDE
-&kp LALT     &ext_power EP_ON  &trans       &trans           &trans    &trans     &trans    &trans  &trans     &kp N0        &kp KP_PLUS   &kp LBRC      &kp RBRC  &kp PIPE
-                                            &trans           &kp LGUI  &trans     &trans    &trans  &trans     &trans        &trans
+&GenexEmail     &EEstates_1       &Firstaid_2  &InjuryHappen_3  &Report        &followup                    &trans     &kp N7        &kp NUMBER_8  &kp NUMBER_9  &trans    &trans
+&GenexPassword  &NTPassword       &kp UP       &kp RET          &SalesforcePW  &trans                       &trans     &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp F11   &kp F12
+&kp GRAVE       &kp LEFT          &kp DOWN     &kp RIGHT        &trans         &trans                       &kp CARET  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp RPAR  &kp TILDE
+&kp LALT        &ext_power EP_ON  &trans       &trans           &trans         &trans     &trans    &trans  &trans     &kp N0        &kp KP_PLUS   &kp LBRC      &kp RBRC  &kp PIPE
+                                               &trans           &kp LGUI       &trans     &trans    &trans  &trans     &trans        &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
