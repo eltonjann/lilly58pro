@@ -61,18 +61,18 @@
             label = "NTPASSWORD";
         };
 
-        GenexPassword: GenexPassword {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&none &kp LS(G) &kp E &kp N &kp E &kp X &kp LS(C) &kp LS(C) &kp AT &kp N1 &kp N1 &kp N0 &kp N9 &kp N2 &kp N0 &kp N2 &kp N3>;
-            label = "GENEXPASSWORD";
-        };
-
         SalesforcePW: SalesforcePW {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&none &kp LS(G) &kp E &kp N &kp I &kp U &kp S &kp AT &kp N1 &kp N2 &kp N3 &kp EXCL>;
             label = "SALESFORCEPW";
+        };
+
+        NT_passwod: NT_passwod {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LS(G) &kp E &kp N &kp I &kp U &kp S &kp UNDER &kp N1 &kp N2 &kp N3 &kp EXCL>;
+            label = "NT_PASSWOD";
         };
     };
 
@@ -107,11 +107,11 @@
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-&GenexEmail     &EEstates_1       &Firstaid_2  &InjuryHappen_3  &Report        &followup                    &trans             &kp N7        &kp NUMBER_8  &kp NUMBER_9  &kp N0     &kp ASTERISK
-&GenexPassword  &NTPassword       &kp UP       &kp RET          &SalesforcePW  &kp F5                       &trans             &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans     &kp MINUS
-&kp GRAVE       &kp LEFT          &kp DOWN     &kp RIGHT        &trans         &trans                       &kp K_SCROLL_UP    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans     &kp TILDE
-&kp LALT        &ext_power EP_ON  &trans       &trans           &trans         &trans     &kp F4    &trans  &kp K_SCROLL_DOWN  &kp N0        &trans        &trans        &kp SLASH  &kp PIPE
-                                               &trans           &kp LGUI       &trans     &trans    &trans  &trans             &trans        &trans
+&GenexEmail  &EEstates_1       &Firstaid_2  &InjuryHappen_3  &Report        &followup                    &trans             &kp N7        &kp NUMBER_8  &kp NUMBER_9  &kp N0     &kp ASTERISK
+&NT_passwod  &NTPassword       &kp UP       &kp RET          &SalesforcePW  &kp F5                       &trans             &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans     &kp MINUS
+&kp GRAVE    &kp LEFT          &kp DOWN     &kp RIGHT        &trans         &trans                       &kp K_SCROLL_UP    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans     &kp TILDE
+&kp LALT     &ext_power EP_ON  &trans       &trans           &trans         &trans     &kp F4    &trans  &kp K_SCROLL_DOWN  &kp N0        &trans        &trans        &kp SLASH  &kp PIPE
+                                            &trans           &kp LGUI       &trans     &trans    &trans  &trans             &trans        &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
