@@ -14,7 +14,7 @@
         Codepass: new_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp N0 &kp N9 &kp N3 &kp N2 &kp N2 &kp N4>;
+            bindings = <&kp N0 &kp N9 &kp N3 &kp N2 &kp N2 &kp N4>;
             label = "NEW_MACRO";
         };
     };
@@ -86,6 +86,16 @@
 &trans     &kp H         &kp J   &kp K      &kp L       &kp SEMICOLON                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans     &kp N         &kp M   &kp COMMA  &kp PERIOD  &kp SLASH      &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
                                  &trans     &trans      &trans         &trans    &trans  &trans  &trans  &trans
+            >;
+        };
+
+        layer_4 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
             >;
         };
     };
