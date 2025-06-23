@@ -11,68 +11,11 @@
 
 / {
     macros {
-        EEstates_1: EEstates_1 {
+        Codepass: new_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_SHIFT &kp LS(E) &kp LS(E) &kp SPACE &kp S &kp T &kp A &kp T &kp E &kp S>;
-            label = "EESTATES_1";
-            tap-ms = <0>;
-        };
-
-        Firstaid_2: Firstaid_2 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&none &kp LS(R) &kp LS(N) &kp SPACE &kp A &kp D &kp V &kp I &kp S &kp E &kp D &kp SPACE &kp F &kp I &kp R &kp S &kp T &kp SPACE &kp A &kp I &kp D &kp MINUS>;
-            label = "FIRSTAID_2";
-        };
-
-        InjuryHappen_3: InjuryHappen_3 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&none &kp LS(E) &kp LS(E) &kp SPACE &kp S &kp T &kp A &kp T &kp E &kp S &kp SPACE &kp I &kp N &kp J &kp U &kp R &kp Y &kp SPACE &kp H &kp A &kp P &kp P &kp E &kp N &kp E &kp D &kp SPACE>;
-            label = "INJURYHAPPEN_3";
-        };
-
-        GenexEmail: GenexEmail {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&none &kp E &kp L &kp T &kp O &kp N &kp DOT &kp C &kp O &kp R &kp T &kp E &kp S &kp AT &kp G &kp E &kp N &kp E &kp X &kp S &kp E &kp R &kp V &kp I &kp C &kp E &kp S &kp DOT &kp C &kp O &kp M>;
-            label = "GENEXEMAIL";
-        };
-
-        Report: Report {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&none &kp C &kp A &kp L &kp L &kp I &kp N &kp G &kp SPACE &kp T &kp O &kp SPACE &kp R &kp E &kp P &kp O &kp R &kp T &kp SPACE &kp I &kp N &kp C &kp I &kp D &kp E &kp N &kp T &kp SPACE>;
-            label = "REPORT";
-        };
-
-        followup: followup {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&none &kp A &kp N &kp D &kp SPACE &kp F &kp O &kp L &kp L &kp O &kp W &kp SPACE &kp U &kp P &kp DOT>;
-            label = "FOLLOWUP";
-        };
-
-        NTPassword: NTPassword {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&none &kp LS(W) &kp E &kp L &kp C &kp O &kp M &kp E &kp UNDER &kp N1 &kp N2 &kp N3 &kp EXCL>;
-            label = "NTPASSWORD";
-        };
-
-        SalesforcePW: SalesforcePW {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&none &kp LS(G) &kp E &kp N &kp I &kp U &kp S &kp AT &kp N1 &kp N2 &kp N3 &kp EXCL>;
-            label = "SALESFORCEPW";
-        };
-
-        NT_passwod: NT_passwod {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&none &kp LS(G) &kp E &kp N &kp I &kp U &kp S &kp UNDER &kp N1 &kp N2 &kp N3 &kp EXCL>;
-            label = "NT_PASSWOD";
+            bindings = <&none &kp N0 &kp N9 &kp N3 &kp N2 &kp N2 &kp N4>;
+            label = "NEW_MACRO";
         };
     };
 
@@ -138,11 +81,11 @@
 
         layer_3 {
             bindings = <
-&trans  &kp NUMBER_6  &kp N7  &kp N8     &kp N9      &kp N0                           &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp Y         &kp U   &kp I      &kp O       &kp P                            &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp H         &kp J   &kp K      &kp L       &kp SEMICOLON                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp N         &kp M   &kp COMMA  &kp PERIOD  &kp SLASH      &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                              &trans     &trans      &trans         &trans    &trans  &trans  &trans  &trans
+&Codepass  &kp NUMBER_6  &kp N7  &kp N8     &kp N9      &kp N0                           &trans  &trans  &trans  &trans  &trans  &trans
+&trans     &kp Y         &kp U   &kp I      &kp O       &kp P                            &trans  &trans  &trans  &trans  &trans  &trans
+&trans     &kp H         &kp J   &kp K      &kp L       &kp SEMICOLON                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans     &kp N         &kp M   &kp COMMA  &kp PERIOD  &kp SLASH      &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                                 &trans     &trans      &trans         &trans    &trans  &trans  &trans  &trans
             >;
         };
     };
