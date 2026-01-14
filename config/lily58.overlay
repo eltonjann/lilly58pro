@@ -19,14 +19,8 @@
     pimoroni_trackball: trackball@0a {
         compatible = "pimoroni,trackball";
         reg = <0x0a>;
-
         x-scale = <12>;
         y-scale = <12>;
-
-        /* Uncomment if needed */
-        /* invert-x; */
-        /* invert-y; */
-
         status = "okay";
     };
 };
