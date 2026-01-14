@@ -1,0 +1,31 @@
+/ {
+    chosen {
+        zmk,pointing-device = &pimoroni_trackball;
+    };
+
+    keys {
+        compatible = "gpio-keys";
+
+        trackball_click: trackball_click {
+            gpios = <&gpio0 10 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+            label = "TRACKBALL_CLICK";
+        };
+    };
+};
+
+&i2c0 {
+    status = "okay";
+
+    pimoroni_trackball: trackball@0a {
+        compatible = "pimoroni,trackball";
+        reg = <0x0a>;
+
+        x-scale = <12>;
+        y-scale = <12>;
+
+        /* invert-x; */
+        /* invert-y; */
+
+        status = "okay";
+    };
+};
